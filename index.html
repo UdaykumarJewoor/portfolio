@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udaykumar Jewoor - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Custom animations */
         .fade-in {
@@ -46,51 +48,105 @@
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans">
 
-    <!-- Header with Navigation Tabs -->
-    <header class="bg-gray-800 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-yellow-500">Udaykumar Jewoor</h1>
-            <nav class="space-x-4">
-                <a href="#about" class="text-gray-300 hover:text-yellow-500 transition">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-yellow-500 transition">Skills</a>
-                <a href="#experience" class="text-gray-300 hover:text-yellow-500 transition">Experience</a>
-                <a href="#projects" class="text-gray-300 hover:text-yellow-500 transition">Projects</a>
-                <a href="#contact" class="text-gray-300 hover:text-yellow-500 transition">Contact</a>
-            </nav>
+<!-- Header with Navigation Tabs -->
+<header class="bg-gray-800 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-yellow-500">Udaykumar Jewoor</h1>
+        <!-- Hamburger Icon for Mobile View -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
-    </header>
+        <nav class="hidden md:flex space-x-4">
+            <a href="#about" class="text-gray-300 hover:text-yellow-500 transition">About</a>
+            <a href="#skills" class="text-gray-300 hover:text-yellow-500 transition">Skills</a>
+            <a href="#experience" class="text-gray-300 hover:text-yellow-500 transition">Experience</a>
+            <a href="#projects" class="text-gray-300 hover:text-yellow-500 transition">Projects</a>
+            <a href="#contact" class="text-gray-300 hover:text-yellow-500 transition">Contact</a>
+        </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-gray-800 text-gray-300 hidden">
+        <a href="#about" class="block px-4 py-2 hover:bg-gray-700 transition">About</a>
+        <a href="#skills" class="block px-4 py-2 hover:bg-gray-700 transition">Skills</a>
+        <a href="#experience" class="block px-4 py-2 hover:bg-gray-700 transition">Experience</a>
+        <a href="#projects" class="block px-4 py-2 hover:bg-gray-700 transition">Projects</a>
+        <a href="#contact" class="block px-4 py-2 hover:bg-gray-700 transition">Contact</a>
+    </div>
+</header>
+
+
+    
 
     <div class="flex flex-col md:flex-row">
-        <!-- Sidebar with Contact Info -->
-        <aside class="w-full md:w-64 bg-gray-800 min-h-screen p-6">
-            <div class="text-center mb-8">
-                <img src="/Uday_Image.jpg" alt="Profile Picture" class="rounded-full mx-auto mb-4 w-32 h-32">
-                <h2 class="text-xl font-semibold">I'm a <span id="role" class="text-yellow-500"></span></h2>
-            </div>
-            <div class="space-y-2 text-center">
-                <p class="text-gray-400">udaykumargjewoor@gmail.com</p>
-                <p class="text-gray-400">+91 7259931948</p>
-                <p><a href="https://github.com/UdaykumarJewoor" class="text-yellow-500 hover:underline">GitHub</a></p>
-                <p><a href="https://linkedin.com/in/udaykumar-jewoor" class="text-yellow-500 hover:underline">LinkedIn</a></p>
-                <p><a href="https://udaykumarjewoor.github.io/portfolio/" class="text-yellow-500 hover:underline">Website</a></p>
-            </div>
-        </aside>
+     <!-- Sidebar with Contact Info -->
+<!-- Sidebar with Contact Info -->
+<aside class="w-full md:w-64 bg-gray-800 min-h-screen p-6">
+    <div class="text-center mb-8">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full mx-auto mb-4 w-32 h-32">
+        <h2 class="text-xl font-semibold">I'm a <span id="role" class="text-yellow-500"></span></h2>
+    </div>
+    <div class="flex justify-center space-x-4 text-yellow-500 mb-4">
+        <p class="flex items-center">
+            <i class="fas fa-envelope"></i>
+        </p>
+        <p class="flex items-center">
+            <i class="fas fa-phone-alt"></i>
+        </p>
+        <p>
+            <a href="https://github.com/UdaykumarJewoor" class="flex items-center hover:text-white">
+                <i class="fab fa-github"></i>
+            </a>
+        </p>
+        <p>
+            <a href="https://linkedin.com/in/udaykumar-jewoor" class="flex items-center hover:text-white">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </p>
+        <p>
+            <a href="https://udaykumarjewoor.github.io/portfolio/" class="flex items-center hover:text-white">
+                <i class="fas fa-globe"></i>
+            </a>
+        </p>
+        <p>
+            <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME" class="flex items-center hover:text-white">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </p>
+    </div>
+    <!-- <div class="text-gray-400 text-center">
+        <p>udaykumargjewoor@gmail.com</p>
+        <p>+91 7259931948</p>
+    </div> -->
+</aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-8">
+        <main class="flex-1 p-6 md:p-8">
             <!-- About Section -->
             <section id="about" class="mb-10 fade-in">
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">About Me</h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">About Me</h2>
                 <p class="text-gray-300">
-                    As a competent Software Engineer, I have a thorough understanding of Java (core & advanced), SQL, HTML, CSS, JavaScript, and React. 
+                    As a competent Software Engineer, I have a thorough understanding of Spring Boot, SQL, HTML, CSS, and JavaScript. 
                     With a quick ability to grasp new software and technology, I excel in team-oriented environments, providing valuable support. 
                     When I'm not trying to build, learning, exploring, and thinking about how to make things better.
                 </p>
+                
+                <div class="mt-6 flex space-x-4">
+                    <a href="mailto:udaykumargjewoor@gmail.com" class="inline-block px-6 py-2 text-white bg-yellow-500 hover:bg-yellow-600 rounded transition duration-300">
+                        Hire Me
+                    </a>
+                    <a href="https://drive.google.com/file/d/1KUaA6WDETpFsiLzycPp6i45RFSYJTOoz/view?usp=sharing" target="_blank" class="inline-block px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded transition duration-300">
+                        Resume
+                    </a>
+                </div>
             </section>
-
+            
             <!-- Profile Summary Section -->
             <section id="profile" class="mb-10 fade-in">
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Profile Summary</h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Profile Summary</h2>
                 <ul class="list-disc ml-6 text-gray-300">
                     <li>Skilled Java Full Stack Developer with 2 years of experience in creating robust back-end systems using Java and frameworks such as Spring Boot and Hibernate.</li>
                     <li>Proficient in front-end technologies, including HTML, CSS, and JavaScript, focusing on developing engaging user interfaces and ensuring seamless user experiences.</li>
@@ -101,7 +157,7 @@
 
             <!-- Skills Section -->
             <section id="skills" class="mb-10 fade-in">
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Technical Skills</h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Technical Skills</h2>
                 <ul class="list-disc ml-6 text-gray-300">
                     <li>Back-End Development: Java, Spring Boot, Hibernate, Flask</li>
                     <li>Front-End Development: HTML, CSS, JavaScript, React</li>
@@ -113,49 +169,77 @@
             <!-- Experience Section -->
             <section id="experience" class="mb-10 fade-in">
                 <!-- Internship Section -->
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Internships</h2>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-2xl font-semibold text-white">Java Full-stack Developer</h3>
-                    <p class="text-gray-400">KodNest Technologies Pvt Ltd, Bengaluru, Karnataka</p>
-                    <p class="text-gray-400">08/2022 – 12/2022</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
-                    <h3 class="text-2xl font-semibold text-white">Java Developers (Remote)</h3>
-                    <p class="text-gray-400">Redis University</p>
-                    <p class="text-gray-400">04/2023 – 06/2023</p>
-                </div>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Internships</h2>
+<div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+    <h3 class="text-xl font-semibold text-white">
+        Java Full-stack Developer
+    </h3>
+    <p class="text-gray-400">KodNest Technologies Pvt Ltd, Bengaluru, Karnataka</p>
+    <p class="text-gray-400">08/2022 – 12/2022</p>
+    <a href="https://drive.google.com/file/d/1JM9EMHarB_nTSBero9ncZs_ryrwKbAMc/view" target="_blank" class="text-yellow-400 hover:underline">Click here</a>
+</div>
+<div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+    <h3 class="text-xl font-semibold text-white">
+        Java Developers (Remote)
+    </h3>
+    <p class="text-gray-400">Redis University</p>
+    <p class="text-gray-400">04/2023 – 06/2023</p>
+    <a href="https://drive.google.com/file/d/1UyfVqwtm2hLYMBbWGdU9tF8RG593Qyxo/view" target="_blank" class="text-yellow-400 hover:underline">Click here</a>
+</div>
+
 
                 <!-- Professional Experience Section -->
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Professional Experience</h2>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition hover:scale-105">
-                    <h3 class="text-2xl font-semibold text-white">Backend Developer</h3>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Professional Experience</h2>
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Backend Developer</h3>
                     <p class="text-gray-400">PradeepIT Global Consulting Pvt Ltd</p>
                     <p class="text-gray-400">12/2022 – Present</p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Developing and maintaining robust backend systems using Java and Spring Boot to ensure high performance and responsiveness to requests for frontend.</li>
+                        <li>Implementing secure RESTful APIs to facilitate seamless communication between front-end and back-end systems, enhancing the user experience.</li>
+                        <li>Optimizing database queries and management processes to improve data retrieval times and ensure efficient data handling.</li>
+                        <li>Collaborating with cross-functional teams to analyze requirements and provide technical solutions that meet client needs and expectations.</li>
+                    </ul>
                 </div>
+                
             </section>
 
             <!-- Projects Section -->
             <section id="projects" class="mb-10 fade-in">
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Projects</h2>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Projects</h2>
+                
+                <!-- Resume Parser Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
                     <h3 class="text-xl font-semibold text-white">Resume Parser</h3>
-                    <p class="text-gray-300">A Python Flask, OpenAI and JavaScript solution that automates the conversion of resumes into a standardized format, extracting key details like skills and experience to save recruiters time and ensure consistent formatting.</p>
+                    <p class="text-gray-300">
+                        A Flask and OpenAI JavaScript application that converts candidate resumes to the organization's format instantly.
+                    </p>
+                    <ul class="list-disc ml-6 text-gray-300">
+                        <li>Extracts all resume details including skills and experience.</li>
+                        <li>Saves recruiters time by automating the process.</li>
+                        <li>Ensures consistent resume formatting.</li>
+                        <li>Improves recruitment efficiency with standardized resume data.</li>
+                    </ul>
                     <p class="text-gray-400">03/2023 – 07/2023</p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition hover:scale-105">
-                    <h3 class="text-xl font-semibold text-white">Fastays</h3>
-                    <p class="text-gray-300">Fastays Travel Application is a Spring Boot-based platform that allows users to easily book buses, flights, and hotels.</p>
-                    <ul class="list-disc ml-6 text-gray-300 mt-2">
-                        <li>User authentication, seamless booking interface, and secure payment integration.</li>
-                        <li>Travelers can manage reservations and access all travel services in one place.</li>
+
+                <!-- Fastays Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Fastays Travel Application</h3>
+                    <p class="text-gray-300">
+                        Fastays Travel Application is a Spring Boot-based platform that allows users to easily book buses, flights, and hotels.
+                    </p>
+                    <ul class="list-disc ml-6 text-gray-300">
+                        <li>The application features user authentication, a seamless booking interface, and secure payment integration.</li>
+                        <li>With a user-friendly dashboard, travelers can manage their reservations and access all travel services in one place, making trip planning efficient and convenient.</li>
                     </ul>
-                    <p class="text-gray-400">04/2024 – Present</p>
+                    <p class="text-gray-400">08/2023 – Present</p>
                 </div>
             </section>
 
             <!-- Contact Section -->
             <section id="contact" class="mb-10 fade-in">
-                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Contact</h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Contact</h2>
                 <div class="text-gray-300">
                     <p>Email: <a href="mailto:udaykumargjewoor@gmail.com" class="text-yellow-500 hover:underline">udaykumargjewoor@gmail.com</a></p>
                     <p>Phone: <a href="tel:+917259931948" class="text-yellow-500 hover:underline">+91 7259931948</a></p>
@@ -196,6 +280,15 @@
                 setTimeout(type, 500); // Pause before typing next role
             }
         }
+
+        // Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
 
         // Start the typing animation
         document.addEventListener("DOMContentLoaded", type);
