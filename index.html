@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaykumar Jewoor - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Text typing animation */
+        .typing {
+            border-right: 2px solid yellow;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 2s steps(10, end) forwards, blink 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <!-- Header with Navigation Tabs -->
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-500">Udaykumar Jewoor</h1>
+            <nav class="space-x-4">
+                <a href="#about" class="text-gray-300 hover:text-yellow-500 transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-yellow-500 transition">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-yellow-500 transition">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-yellow-500 transition">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-yellow-500 transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar with Contact Info -->
+        <aside class="w-full md:w-64 bg-gray-800 min-h-screen p-6">
+            <div class="text-center mb-8">
+                <img src="/Uday_Image.jpg" alt="Profile Picture" class="rounded-full mx-auto mb-4 w-32 h-32">
+                <h2 class="text-xl font-semibold">I'm a <span id="role" class="text-yellow-500"></span></h2>
+            </div>
+            <div class="space-y-2 text-center">
+                <p class="text-gray-400">udaykumargjewoor@gmail.com</p>
+                <p class="text-gray-400">+91 7259931948</p>
+                <p><a href="https://github.com/UdaykumarJewoor" class="text-yellow-500 hover:underline">GitHub</a></p>
+                <p><a href="https://linkedin.com/in/udaykumar-jewoor" class="text-yellow-500 hover:underline">LinkedIn</a></p>
+                <p><a href="https://udaykumarjewoor.github.io/portfolio/" class="text-yellow-500 hover:underline">Website</a></p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- About Section -->
+            <section id="about" class="mb-10 fade-in">
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">About Me</h2>
+                <p class="text-gray-300">
+                    As a competent Software Engineer, I have a thorough understanding of Java (core & advanced), SQL, HTML, CSS, JavaScript, and React. 
+                    With a quick ability to grasp new software and technology, I excel in team-oriented environments, providing valuable support. 
+                    When I'm not trying to build, learning, exploring, and thinking about how to make things better.
+                </p>
+            </section>
+
+            <!-- Profile Summary Section -->
+            <section id="profile" class="mb-10 fade-in">
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Profile Summary</h2>
+                <ul class="list-disc ml-6 text-gray-300">
+                    <li>Skilled Java Full Stack Developer with 2 years of experience in creating robust back-end systems using Java and frameworks such as Spring Boot and Hibernate.</li>
+                    <li>Proficient in front-end technologies, including HTML, CSS, and JavaScript, focusing on developing engaging user interfaces and ensuring seamless user experiences.</li>
+                    <li>Experienced in integrating front-end and back-end systems, facilitating smooth communication and functionality across applications.</li>
+                    <li>Possess strong database management skills, optimizing data storage and retrieval efficiency with PostgreSQL and MongoDB.</li>
+                </ul>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mb-10 fade-in">
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Technical Skills</h2>
+                <ul class="list-disc ml-6 text-gray-300">
+                    <li>Back-End Development: Java, Spring Boot, Hibernate, Flask</li>
+                    <li>Front-End Development: HTML, CSS, JavaScript, React</li>
+                    <li>Database Management: PostgreSQL, MongoDB</li>
+                    <li>Tools: Eclipse, Visual Studio Code, Git, Figma, Postman, WordPress</li>
+                </ul>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="mb-10 fade-in">
+                <!-- Internship Section -->
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Internships</h2>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-white">Java Full-stack Developer</h3>
+                    <p class="text-gray-400">KodNest Technologies Pvt Ltd, Bengaluru, Karnataka</p>
+                    <p class="text-gray-400">08/2022 – 12/2022</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-white">Java Developers (Remote)</h3>
+                    <p class="text-gray-400">Redis University</p>
+                    <p class="text-gray-400">04/2023 – 06/2023</p>
+                </div>
+
+                <!-- Professional Experience Section -->
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Professional Experience</h2>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition hover:scale-105">
+                    <h3 class="text-2xl font-semibold text-white">Backend Developer</h3>
+                    <p class="text-gray-400">PradeepIT Global Consulting Pvt Ltd</p>
+                    <p class="text-gray-400">12/2022 – Present</p>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mb-10 fade-in">
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Projects</h2>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Resume Parser</h3>
+                    <p class="text-gray-300">A Python Flask, OpenAI and JavaScript solution that automates the conversion of resumes into a standardized format, extracting key details like skills and experience to save recruiters time and ensure consistent formatting.</p>
+                    <p class="text-gray-400">03/2023 – 07/2023</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Fastays</h3>
+                    <p class="text-gray-300">Fastays Travel Application is a Spring Boot-based platform that allows users to easily book buses, flights, and hotels.</p>
+                    <ul class="list-disc ml-6 text-gray-300 mt-2">
+                        <li>User authentication, seamless booking interface, and secure payment integration.</li>
+                        <li>Travelers can manage reservations and access all travel services in one place.</li>
+                    </ul>
+                    <p class="text-gray-400">04/2024 – Present</p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="mb-10 fade-in">
+                <h2 class="text-3xl font-semibold text-yellow-500 mb-4">Contact</h2>
+                <div class="text-gray-300">
+                    <p>Email: <a href="mailto:udaykumargjewoor@gmail.com" class="text-yellow-500 hover:underline">udaykumargjewoor@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+917259931948" class="text-yellow-500 hover:underline">+91 7259931948</a></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center">
+        <p class="text-gray-400">&copy; 2024 Udaykumar Jewoor. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Text Animation for Role
+        const roles = ["Developer", "Researcher", "Engineer"];
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        const roleElement = document.getElementById("role");
+
+        function type() {
+            if (currentCharIndex < roles[currentRoleIndex].length) {
+                roleElement.textContent += roles[currentRoleIndex].charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(type, 100); // Speed of typing
+            } else {
+                setTimeout(deleteRole, 1000); // Pause before deleting
+            }
+        }
+
+        function deleteRole() {
+            if (currentCharIndex > 0) {
+                roleElement.textContent = roleElement.textContent.slice(0, -1);
+                currentCharIndex--;
+                setTimeout(deleteRole, 50); // Speed of deleting
+            } else {
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                setTimeout(type, 500); // Pause before typing next role
+            }
+        }
+
+        // Start the typing animation
+        document.addEventListener("DOMContentLoaded", type);
+
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
