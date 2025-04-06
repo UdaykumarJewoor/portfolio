@@ -74,7 +74,7 @@ $(document).ready(function () {
     origin: "bottom"
   });
 
-  const roles = ["a Developer!", "a Researcher!", "an Engineer!"];
+  const roles = ["Developer!", "Researcher!", "tech lover!"];
   let currentRoleIndex = 0;
   let currentCharIndex = 0;
   const roleElement = document.getElementById("role");
