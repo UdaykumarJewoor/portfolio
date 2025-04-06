@@ -494,32 +494,32 @@ body {
   border-color: #fed700;
 }
 
+
 /*---------------------------Education & Internship---------------------------*/
+.education-content {
+  padding: 50px 0;
+}
 
 .education-content .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 30px;
-  border-radius: 5px;
   margin-bottom: 100px;
 }
 
 .education-content .title {
   color: #fed700;
-}
-
-.education-content .row .education,
-.education-content .row .internship {
-  color: #e5e5e5;
-  flex: 1;
-  min-width: 350px;
-  margin-top: 30px;
-}
-
-.education-content h3.title {
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 30px;
-  font-weight: 700;
+}
+
+.education-content .education,
+.education-content .internship {
+  flex: 1 1 45%;
+  min-width: 300px;
+  color: #e5e5e5;
 }
 
 .education-content .timeline-box {
@@ -527,7 +527,7 @@ body {
 }
 
 .education-content .timeline {
-  padding: 30px 15px;
+  padding: 30px 20px;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
   background-color: #1e1e1e;
@@ -536,8 +536,8 @@ body {
 
 .education-content .timeline-item {
   position: relative;
-  padding-left: 37px;
-  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-bottom: 40px;
 }
 
 .education-content .timeline-item:last-child {
@@ -546,7 +546,7 @@ body {
 
 .education-content .timeline-item::before {
   content: "";
-  width: 1px;
+  width: 2px;
   position: absolute;
   height: 100%;
   left: 7px;
@@ -567,29 +567,38 @@ body {
 .education-content .timeline-title {
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 12px;
-}
-
-.education-content .internship .timeline-title {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .education-content .timeline-text {
-  line-height: 25px;
   font-size: 16px;
+  line-height: 25px;
   text-align: justify;
+  margin-bottom: 8px;
+  color: #dcdcdc;
+}
+
+/* List styling for experience */
+.education-content .timeline ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.education-content .timeline li.timeline-text {
+  margin-bottom: 8px;
+  list-style-type: disc;
 }
 
 /* ---------------- Responsive Design ---------------- */
 @media (max-width: 1024px) {
   .education-content .row {
     flex-direction: column;
+    gap: 50px;
   }
 
   .education-content .timeline {
-    padding: 25px 10px;
+    padding: 25px 15px;
   }
 
   .education-content .timeline-title {
@@ -602,16 +611,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .education-content h3.title {
+  .education-content .title {
     font-size: 22px;
   }
 
-  .education-content .timeline-title {
-    font-size: 16px;
-  }
-
   .education-content .timeline-item {
-    padding-left: 30px;
+    padding-left: 25px;
   }
 
   .education-content .circle-dot {
@@ -621,7 +626,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .education-content h3.title {
+  .education-content .title {
     font-size: 20px;
   }
 
@@ -638,22 +643,19 @@ body {
     width: 10px;
   }
 }
-
-
-/*---------------------------Projects---------------------------*/
+/*--------------------------- Projects ---------------------------*/
 .project-content {
   padding: 90px 5%;
 }
 
 .project-title {
-  margin-bottom: 60px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .project-title h4 {
   text-transform: uppercase;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 25px;
   color: #fed700;
   margin-bottom: 20px;
 }
@@ -666,28 +668,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .project {
+  background: transparent;
   color: #e5e5e5;
   border: 2px solid #e5e5e5;
   border-radius: 10px;
   width: 90%;
   max-width: 900px;
-  position: relative;
   padding: 40px;
+  position: relative;
   text-align: left;
-  transition: 0.3s;
+  transition: border-color 0.3s;
 }
 
 .project i {
   background-color: #fed700;
   width: 80px;
   height: 80px;
+  line-height: 80px;
   color: #333;
   font-size: 32px;
-  line-height: 80px;
   border-radius: 50%;
   text-align: center;
   display: block;
@@ -706,6 +709,7 @@ body {
 }
 
 .project ul {
+  list-style-type: disc;
   padding-left: 20px;
   margin-bottom: 15px;
 }
@@ -717,9 +721,9 @@ body {
 .project .date {
   font-weight: bold;
   color: #fed700;
-  text-align: right;
   display: block;
   margin-top: 10px;
+  text-align: right;
 }
 
 .project:hover {
@@ -729,7 +733,6 @@ body {
 /* ---------------- Responsive Design ---------------- */
 @media (max-width: 1024px) {
   .project {
-    width: 90%;
     padding: 30px;
   }
 
@@ -790,7 +793,6 @@ body {
     font-size: 12px;
   }
 }
-
 
 /*---------------------------Contact Me---------------------------*/
 .contact-content {
